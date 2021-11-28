@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import { Grid } from '@mui/material';
+import CourseCard from './Components/Card';
+import Header from './Components/Header'
+import SearchBanner from './Components/SearchBanner';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <SearchBanner />
+      {/* <Grid container spacing={1}>
+        {['', '', '', ''].map(v => <Grid item md={4} sm={6}
+          xs={12} lg={4} xl={4}>
+          <CourseCard /></Grid>)}
+      </Grid> */}
     </div>
   );
 }

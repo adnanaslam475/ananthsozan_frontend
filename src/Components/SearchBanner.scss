@@ -1,0 +1,82 @@
+.main{
+    background: #002121;
+    padding: 20px;
+}
+.srch-input{width: auto;}
+
+.search-results{
+    background: #002121;
+    min-height: 200px;
+    padding: 20px 70px 0 70px;
+}
+.banner{
+    .css-1q6at85-MuiInputBase-root-MuiOutlinedInput-root{
+        padding-left: 0px;
+        border-radius: 0px;
+    }
+    .css-wb57ya-MuiFormControl-root-MuiTextField-root{
+        background-color: white;
+    }
+    .search-btn{
+        min-height: 50px;
+        background-color: #d23228;
+        border-radius: 0px;
+    }
+    .search-btn:hover{
+       background-color:  #921108;
+    }
+    .css-1d3z3hw-MuiOutlinedInput-notchedOutline{
+        border: none;
+    }
+    .css-1o9s3wi-MuiInputBase-input-MuiOutlinedInput-input{
+        max-height: 15px;
+    }
+}
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
+    border-radius: 0px !important;
+}
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.MuiSelect-select{
+    background-color: white;
+    border-radius: 0px;
+    display: flex;
+    align-items: center;
+    max-height: 8px;
+    min-height: 0px !important;
+}
+.css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper{
+    // left: 182px !important;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+    border: 1px solid gray;
+}
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root{animation: none;}
+.css-1joyrxq-MuiFormControl-root{
+    background-color: white;
+}
+.MuiPaper-root {
+    max-height: 250px !important;}
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root{
+    // padding: 0 10px 0 0 !important;
+    // margin: 0px;
+}
+.selected-main{
+    padding: 10px 0 0 0 !important;
+}
+.selected-container{
+    background-color: rgb(228, 222, 222);
+    width: 50px auto;
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin: 5px;
+    border-radius: 2px;
+    height: 20px;
+    padding: 5px;
+    p{
+        color: rgb(104, 104, 104);
+    }
+    // :not(:first-child){
+    //     align-self: flex-end;
+    //     // right:0;
+    // }
+}
