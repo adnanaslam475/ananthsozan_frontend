@@ -9,11 +9,16 @@ function App() {
     <div className="App">
       <Header />
       <SearchBanner />
-      {/* <Grid container spacing={1}>
-        {['', '', '', ''].map(v => <Grid item md={4} sm={6}
-          xs={12} lg={4} xl={4}>
-          <CourseCard /></Grid>)}
-      </Grid> */}
+      <Grid container spacing={4} className='' style={{
+        maxWidth: '95%',
+        border: '1px solid red'
+      }}
+        margin={2} padding={1}>
+        {['', '', '', ''].map(v => <Grid className='web' item
+          md={3} sm={6} xs={12} lg={3} xl={3}>
+          <CourseCard />
+        </Grid>)}
+      </Grid>
     </div>
   );
 }

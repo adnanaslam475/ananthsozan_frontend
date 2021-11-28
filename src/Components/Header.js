@@ -1,8 +1,7 @@
 import React, { useEffect, useRef, useLayoutEffect, useState } from 'react'
 import {
     MenuList, Table, TableCell, TextField,
-    InputAdornment, TableHead, Menu, List, Paper,
-    makeStyles, createTheme, Button
+    InputAdornment,  Button
 } from '@mui/material'
 import { KeyboardArrowDown, CheckCircleOutline, Search } from '@mui/icons-material';
 import './Header.scss'
@@ -10,6 +9,10 @@ import './Header.scss'
 const Header = () => {
     const input = useRef(null);
     const [searchshow, setsearchshow] = useState(false)
+    useEffect(() => {
+        // input.current.classList.add('inp');
+    }, [])
+    
     return (
         <div className='header'>
             <img src='https://www.edx.org/images/logos/edx-logo-elm.svg'

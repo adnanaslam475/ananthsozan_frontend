@@ -36,7 +36,8 @@ const SearchBanner = () => {
                     onClick={() => ''}>Search</Button>
             </div>
             <div className='d-flex maxh-50 relative'>
-                {names.map((value, idx) => <FormControl sx={{ m: 1, marginLeft: idx === 0 ? '0px' : '5px' }}>
+                {names.map((value, idx) => <FormControl key={idx}
+                    sx={{ m: 1, marginLeft: idx === 0 ? '0px' : '5px' }}>
                     <Select value='none' name={value.name}
                         id={value.name} onClick={e => ''} onChange={e => console.log(e)}>
                         <option value='none' className='d-none maxh-50' >
