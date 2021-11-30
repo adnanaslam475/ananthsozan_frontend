@@ -11,7 +11,6 @@ function App() {
       <SearchBanner />
       <Grid container spacing={4} className='' style={{
         maxWidth: '95%',
-        border: '1px solid red'
       }}
         margin={2} padding={1}>
         {['', '', '', ''].map(v => <Grid className='web' item

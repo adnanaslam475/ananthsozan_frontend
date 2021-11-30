@@ -20,7 +20,7 @@ const SearchBanner = () => {
     return (
         <div className='search-results banner column'>
             <h6 className='bold c-white text-left mb-5' >Search Courses and Programs</h6>
-            <div className='d-flex maxh-50'>
+            <div className='d-flex maxh-50 bg-white'>
                 <TextField placeholder='What do you want to learn'
                     className='input-search'
                     fullWidth
@@ -40,7 +40,7 @@ const SearchBanner = () => {
                     sx={{ m: 1, marginLeft: idx === 0 ? '0px' : '5px' }}>
                     <Select value='none' name={value.name}
                         id={value.name} onClick={e => ''} onChange={e => console.log(e)}>
-                        <option value='none' className='d-none maxh-50' >
+                        <option value='none' className='d-none maxh-50 bg-white' >
                             {value.name}
                         </option>
                         {value.options.map((name, i) => (

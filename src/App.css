@@ -71,6 +71,10 @@ table {
 .c-white{
 	color: white;
 }
+
+.bg-white{
+	background-color: white;
+}
 .text-left{
 	text-align: left;
 }
