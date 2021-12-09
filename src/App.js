@@ -13,8 +13,8 @@ function App() {
         maxWidth: '95%',
       }}
         margin={2} padding={1}>
-        {['', '', '', ''].map(v => <Grid className='web' item
-          md={3} sm={6} xs={12} lg={3} xl={3}>
+        {['', '', '', ''].map((v, i) => <Grid className='web' item
+          md={3} sm={6} xs={12} key={i} lg={3} xl={3}>
           <CourseCard />
         </Grid>)}
       </Grid>

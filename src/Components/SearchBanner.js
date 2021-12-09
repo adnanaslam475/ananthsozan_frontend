@@ -44,7 +44,7 @@ const SearchBanner = () => {
                             {value.name}
                         </option>
                         {value.options.map((name, i) => (
-                            <div className='row d-flex align-c ml-5'
+                            <div key={i} className='row d-flex align-c ml-5'
                                 style={{}} >
                                 <input type="checkbox" value="Bike" />
                                 <MenuItem focusRipple={false} disableRipple key={i} value={name}>
