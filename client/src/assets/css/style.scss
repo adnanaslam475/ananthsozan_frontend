@@ -1,0 +1,1441 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+}
+
+:root {
+    --primary-color: #ffe100;
+    --white-color: #FFFFFF;
+    --light-color: #F1F1F1;
+    --black-color: #000000;
+    --dark-color: #333333;
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    margin: auto;
+}
+
+@media only screen and (max-width:1200px) {
+    .container {
+        max-width: 92%;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+.btn {
+    text-decoration: none;
+    outline: none;
+    padding: 7px 12px;
+    border: none;
+    cursor: pointer;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    align-items: stretch;
+}
+
+.main-container {
+    max-width: 678px;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    // background: var(--white-color);
+}
+
+@media only screen and (max-width:678px) {
+    .main-container {
+        max-width: 95%;
+    }
+}
+
+.logo {
+
+    a {
+        color: var(--black-color);
+        font-size: 22px;
+        text-align: center;
+        font-weight: bold;
+
+        span {
+            color: var(--white-color);
+            background-color: var(--primary-color);
+            padding: 3px;
+            margin: 0 4px;
+        }
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: var(--white-color);
+}
+
+.text-dark {
+    color: var(--black-color);
+}
+
+
+/* ==============================================================================================
+                                        Gym Member Pages
+============================================================================================== */
+
+// ========================================== Home Page
+.gym-member-home-page {
+
+    // ============ Header
+    header#header {
+        position: absolute;
+        top: 0;
+        max-width: 100%;
+        width: 100%;
+        transition: all 0.4s ease;
+        padding: 10px;
+        max-height: 65px;
+        background: rgba(255, 255, 255, 0.5);
+
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .menu {
+                display: flex;
+                justify-content: space-between;
+                transition: all 0.4s ease;
+
+                .menuToggle {
+                    background: url(../img/menu.png);
+                    position: relative;
+                    width: 40px;
+                    height: 40px;
+                    background-size: 30px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    cursor: pointer;
+                    filter: invert(1);
+                    transition: all 0.4s ease;
+                }
+
+                .logo {
+                    display: none;
+                    transition: all 0.4s ease;
+                    text-align: center;
+                    width: 100%;
+
+                    a {
+                        color: #000000;
+                        font-weight: bold;
+                        font-size: 32px;
+                        text-align: center;
+                        width: 200px;
+                        display: block;
+
+                        span {
+                            color: #FFFFFF;
+                            background: var(--primary-color);
+                            padding: 2px;
+                            margin: 0 5px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            min-height: 90vh;
+            background: var(--black-color);
+            position: relative;
+            top: -9999px;
+            transition: all 0.4s ease;
+
+            ul {
+                text-align: center;
+
+                li {
+                    margin: 35px 0;
+                    display: block;
+
+                    a {
+                        color: #FFFFFF;
+                        font-size: 18px;
+
+                        &.btn {
+                            background: var(--primary-color);
+                            color: var(--black-color);
+                            padding: 8px 80px;
+                            border-radius: 8px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.active {
+
+            .wrapper {
+
+                .menu {
+
+                    .menuToggle {
+                        background: url(../img/close.png);
+                    }
+
+                    .logo {
+                        display: block;
+                    }
+                }
+            }
+
+            .nav-menu {
+                top: 0px;
+            }
+        }
+    }
+
+    // ========xx== Header
+
+
+
+
+    // ============ Hero Section
+    section.hero-section {
+        // background: url(../img/background-image.JPG);
+        // background: url(../img/gymtrainer.PNG);
+        min-height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+
+        .bg-color {
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .content {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            a.btn {
+                background: var(--primary-color);
+                color: var(--black-color);
+                font-size: 18px;
+                padding: 8px 80px;
+                border-radius: 8px;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            }
+        }
+    }
+
+    // ========xx== Hero Section
+
+
+    // ============ Section 01
+    section.section-01 {
+
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .box {
+                color: var(--white-color);
+                text-align: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+
+                .bg-color {
+                    background: rgba(0, 0, 0, 0.7);
+                    padding: 70px 40px;
+                }
+
+                h2 {
+                    text-transform: uppercase;
+                    font-weight: normal;
+                }
+
+                p {
+                    margin: 25px 0;
+                }
+
+                .btn {
+                    background: var(--primary-color);
+                    padding: 8px 65px;
+                    font-size: 22px;
+                    font-weight: normal;
+                    color: var(--black-color);
+                    border-radius: 8px;
+                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+                }
+            }
+            #box-1 {
+                background: url(../img/header-image.JPG);
+            }
+
+            #box-2 {
+                background: url(../img/header-image2.JPG);
+            }
+
+            #box-3 {
+                background: url(../img/header-image.JPG);
+            }
+
+            #box-4 {
+                background: url(../img/header-image2.JPG);
+            }
+        }
+    }
+
+    // ========xx== Section 01
+}
+
+// ====================================xxx=== Home Page
+
+
+
+// ========================================== Login Page
+.gym-member-login-page {
+
+    // ============ Header
+    header {
+        width: 100%;
+        text-align: center;
+        padding: 40px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            margin: auto;
+        }
+    }
+
+    // ========xx== Header
+
+
+    // ============ Login Form
+    section.login-form-section {
+        margin: 40px 0;
+
+        .heading {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .login-form-wrapper {
+            background: var(--black-color);
+            border-radius: 8px;
+            padding: 40px 15px;
+
+            .group {
+                display: flex;
+                flex-direction: column;
+
+                input {
+                    border: none;
+                    border-bottom: 1px solid var(--light-color);
+                    padding: 7px 4px 4px 8px;
+                    background: transparent;
+                    margin: 8px 0;
+                    outline: none;
+                    display: block;
+                }
+
+                input:focus,
+                input:focus::placeholder {
+                    color: var(--white-color);
+                }
+            }
+
+            button {
+                width: 100%;
+                display: block;
+                margin-top: 15px;
+                cursor: pointer;
+                background: #707070;
+                color: var(--white-color);
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+                padding: 10px 40px;
+                border-radius: 6px;
+            }
+
+            a {
+                display: block;
+                width: 100%;
+                text-align: center;
+                color: var(--light-color);
+                margin: 10px 0;
+            }
+
+            a.btn {
+                background: var(--primary-color);
+                padding: 8px 40px;
+                border-radius: 8px;
+                color: var(--dark-color);
+                margin-top: 25px;
+            }
+        }
+    }
+
+    // ========xx== Login Form
+
+
+    // ============ Footer
+    footer {
+        background: var(--black-color);
+        padding: 25px 0;
+
+        .logo {
+            background: var(--white-color);
+            padding: 5px 7px;
+            border-radius: 8px;
+            width: fit-content;
+            margin: auto;
+
+            a {
+                color: var(--black-color);
+            }
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            max-width: 50px;
+            width: 100%;
+            margin: 22px auto 10px;
+
+            li {
+
+                a {
+                    color: var(--white-color);
+
+                    i {
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+
+        a,
+        p {
+            color: var(--light-color);
+            font-size: 12px;
+        }
+    }
+
+    // ========xx== Footer
+}
+
+// ====================================xxx=== Login Page
+
+
+
+// ========================================== Member Dashboard Page
+.member-dashboard {
+
+    // ============ Main Content
+    section.main-content {
+        margin: 15px 0;
+
+        .remaning-box {
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            border-radius: 7px;
+            padding: 8px;
+            // max-width: 300px;
+            width: 100%;
+            margin: 15px auto;
+            text-align: center;
+
+            h4 {
+                font-weight: normal;
+                font-size: 20px;
+            }
+
+            h1 {
+                font-size: 55px;
+                color: var(--primary-color);
+                font-weight: normal;
+            }
+        }
+
+        .button-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            // max-width: 300px;
+            width: 100%;
+            margin: 10px auto;
+
+            .btn {
+                width: 100%;
+                background: var(--primary-color);
+                margin: 7px 0;
+                text-align: center;
+                border-radius: 7px;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            }
+
+            .buy-class {
+                background: #707070;
+                color: var(--white-color);
+            }
+
+            .view-class {
+                background: var(--black-color);
+                color: var(--white-color);
+            }
+        }
+
+        .links {
+            border-top: 1px solid rgba(0, 0, 0, 0.3);
+            margin-top: 40px;
+            padding-top: 10px;
+
+            ul {
+                max-width: 300px;
+                width: 100%;
+                margin: auto;
+
+                li {
+                    margin: 20px 0;
+
+                    a {
+                        color: #464646;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .sign-out-link {
+            text-align: center;
+            width: 100%;
+            display: block;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    }
+
+    // ========xx== Main Content
+}
+
+// ====================================xxx=== Member Dashboard Page
+
+
+
+// ========================================== Packages Page
+.packages-page {
+
+    // ============ Main Content
+    .main-content {
+        // max-width: 300px;
+        width: 100%;
+        margin: auto;
+
+        .box {
+            border: 1px solid var(--primary-color);
+            padding: 8px;
+            border-radius: 7px;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.1),
+                inset 0 0 3px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            color: var(--black-color);
+        }
+
+        .content {
+            margin: 20px 0;
+
+            h4 {
+                margin-bottom: 15px;
+            }
+
+            .btn.unlimited-class {
+                background: var(--black-color);
+                color: var(--white-color);
+                padding: 25px 50px;
+                display: block;
+                text-align: center;
+            }
+        }
+
+        .class-list {
+            margin-bottom: 40px;
+
+            ul {
+                border-top: 1px solid rgba(0, 0, 0, 0.3);
+
+                li {
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+                    padding: 15px 0;
+
+                    a {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        .left {
+                            color: var(--primary-color);
+                            font-size: 30px;
+                            font-weight: bold;
+                        }
+
+                        .middle {
+                            font-weight: bold;
+                            font-size: 18px;
+                        }
+
+                        .right {
+                            font-size: 12px;
+                            font-weight: bold;
+                        }
+                    }
+
+                    &.last {
+                        .left {
+                            font-size: 18px;
+                        }
+
+                        .middle {
+                            color: var(--primary-color);
+                        }
+                    }
+                }
+            }
+
+            .btn.packages-2 {
+                background: #707070;
+                color: var(--white-color);
+                display: block;
+                margin-top: 25px !important;
+                margin: auto;
+                width: fit-content;
+                padding: 10px 60px;
+                border-radius: 8px;
+            }
+        }
+    }
+
+    // ========xx== Main Content
+}
+
+// ====================================xxx=== Packages Page
+
+
+
+// ========================================== Checkout Page
+.checkout-page {
+
+    // ============ Main Content
+    .main-content {
+        // max-width: 300px;
+        width: 100%;
+        margin: auto;
+
+        .box-wrapper {
+            margin: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        form {
+
+            .form-group {
+                margin: 25px 0;
+
+                label {
+                    font-size: 10px;
+                    font-weight: bold;
+                    margin-bottom: 3px;
+                    display: block;
+                }
+
+                input {
+                    width: 100%;
+                    outline: none;
+                    border: none;
+                    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+                    border-radius: 5px;
+                    padding: 7px;
+                    display: block;
+                }
+
+                select {
+                    width: 100%;
+                    outline: none;
+                    border: none;
+                    padding: 7px;
+                    border-radius: 5px;
+                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+                }
+
+                .btn {
+                    width: 100%;
+                    text-align: center;
+                    background: green;
+                    padding: 10px 50px;
+                    color: var(--white-color);
+                    font-weight: bold;
+                    border-radius: 10px;
+                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+                }
+            }
+
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+
+                .col-12 {
+                    width: 100%;
+
+                    input {
+                        border-radius: 0;
+                        border-top-left-radius: 5px;
+                        border-top-right-radius: 5px;
+                    }
+                }
+
+                .col-6 {
+                    width: 50%;
+                }
+
+                .col-6-first {
+
+                    input {
+                        border-radius: 0;
+                        border-bottom-left-radius: 5px;
+                    }
+                }
+
+                .col-6-second {
+
+                    input {
+                        border-radius: 0;
+                        border-bottom-right-radius: 5px;
+                    }
+                }
+            }
+
+        }
+    }
+
+    // ========xx== Main Content
+}
+
+// ====================================xxx=== Checkout Page
+
+
+
+// ========================================== Class Booked Page
+.class-booked-page {
+
+    // ============ Main Content
+    .main-content {
+        // max-width: 300px;
+        width: 100%;
+        margin: auto;
+
+        .container {
+            padding: 30px 0;
+        }
+
+        p {
+            margin: 25px 0;
+        }
+
+        .checkicon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0;
+
+            i {
+                font-size: 50px;
+                padding: 20px;
+                border-radius: 50%;
+                border: 3px solid var(--black-color);
+            }
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            background: var(--primary-color);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            border-radius: 7px;
+            text-align: center;
+        }
+
+    }
+
+    // ========xx== Main Content
+}
+
+// ====================================xxx=== Class Booked Page
+
+
+
+// ========================================== Booking Page
+.booking-page {
+
+    // ============ Main Content
+    .main-content {
+        max-width: 300px;
+        width: 100%;
+        margin: auto;
+
+        .booking-box-wrapper {
+            width: fit-content;
+            margin: auto;
+
+            .booking-box {
+                background: var(--primary-color);
+                padding: 15px 15px 50px 15px;
+                border-radius: 10px;
+                margin: 30px 0;
+            }
+
+            .booking-cancel-btn {
+
+                .btn {
+                    border: 1px solid var(--dark-color);
+                    padding: 8px 45px;
+                    background: transparent;
+                    border-radius: 8px;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .modal-wrapper {
+            position: fixed;
+            width: 0;
+            height: 0;
+            background: rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+            top: 0;
+            left: 0;
+
+            .modal-box {
+                background: var(--white-color);
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+                border-radius: 8px;
+                padding: 15px;
+                max-width: 220px;
+                width: 100%;
+
+                h3 {
+                    margin-bottom: 70px;
+                }
+
+                .buttons {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    button {
+                        max-width: 50%;
+                        width: 100%;
+                        margin: 0 5px;
+                        border-radius: 7px;
+
+                        &.keep {
+                            background: #e77474;
+                        }
+
+                        &.cancel {
+                            background: #3bce3b;
+                        }
+                    }
+                }
+
+                &#box-1 {
+                    display: none;
+
+                    &.active {
+                        display: block;
+                    }
+                }
+
+                &#box-2 {
+                    display: none;
+                    padding-top: 70px;
+
+                    &.active {
+                        display: block;
+                    }
+                }
+            }
+
+            &.active {
+                width: 100%;
+                height: 100vh;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+    }
+
+    // ========xx== Main Content
+}
+
+// ====================================xxx=== Booking Page
+
+
+
+// ========================================== Calendar Page
+.calendar-page {
+
+    // ============ Main Content
+    .main-content {
+        // max-width: 300px;
+        width: 100%;
+        margin: auto;
+
+        .calendar-wrapper {
+
+            .calendar-box {
+
+                .calendar {
+                    display: grid;
+                    grid-template-columns: repeat(7, 1fr);
+                    text-align: center;
+
+                    div {
+                        margin: 7px 4px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 30px;
+                        height: 30px;
+                    }
+
+                    .week {
+                        font-weight: bolder;
+                        font-size: 27px;
+                    }
+
+                    .day {
+                        font-weight: bold;
+                        font-size: 17px;
+
+                        &.mute {
+                            font-weight: normal;
+                        }
+
+                        &.active {
+                            padding: 7px;
+                            border-radius: 50%;
+                            background: var(--primary-color);
+                        }
+                    }
+                }
+            }
+
+            .class-container {
+
+                .class-wrapper {
+
+                    .class {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        .class-info {
+
+                            .time {
+                                font-size: 14px;
+                                font-weight: normal;
+                            }
+
+                            .name {
+                                font-size: 14px;
+                            }
+
+                            .tutor {
+                                font-size: 14px;
+                            }
+
+                            .extra {
+                                font-size: 13px;
+                                color: #707070;
+                            }
+                        }
+
+                        .btn {
+                            background: var(--primary-color);
+                            border-radius: 7px;
+                        }
+                    }
+
+                    .details {
+                        margin: 5px 0;
+
+                        .detail-heading {
+                            padding-left: 15px;
+                            font-size: 12px;
+                            cursor: pointer;
+
+                            .see-details {
+                                display: block;
+                            }
+
+                            .see-less {
+                                display: none;
+                            }
+                        }
+
+                        .body {
+                            background: var(--primary-color);
+                            padding: 10px;
+                            border-radius: 10px;
+                            margin-top: 12px;
+                            display: none;
+
+                            h3 {
+                                font-size: 14px;
+                                padding: 7px 0 0 0;
+                            }
+
+                            p {
+                                font-size: 12px;
+                                padding: 5px 0;
+                            }
+
+                            hr {
+                                border: 1px solid var(--dark-color);
+                                background: transparent;
+                            }
+                        }
+
+                        &.active {
+
+                            .detail-heading {
+
+                                .see-details {
+                                    display: none;
+                                }
+
+                                .see-less {
+                                    display: block;
+                                }
+                            }
+
+                            .body {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .box {
+                margin: 15px 0;
+
+                .heading {
+                    border-radius: 8px;
+                    background: var(--black-color);
+                    color: var(--white-color);
+                    padding: 7px 30px;
+                    text-align: center;
+                }
+            }
+        }
+
+    }
+
+    // ========xx== Main Content
+}
+
+// ====================================xxx=== Calendar Page
+
+/* ==============================================================================================
+                                xxxx    Gym Member Pages    xxxx
+============================================================================================== */
+
+
+
+
+
+
+
+/* ==============================================================================================
+                                        Instructor Pages
+============================================================================================== */
+
+// ========================================== View Booking Page
+.instructor-page.view-booking-page {
+
+    // ============ Header
+    .booking-box-wrapper {
+        margin: auto;
+
+        .booking-btn {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            button {
+                max-width: 50%;
+                width: 100%;
+                margin: 5px 5px;
+                color: var(--white-color);
+                background: #3bce3b;
+                border-radius: 7px;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+                padding: 8px 25px;
+            }
+
+            button#booking-cancel {
+                background: #e77474;
+            }
+        }
+    }
+
+    // ========xx== Header
+
+}
+
+// ====================================xxx=== View Booking Page
+
+
+
+// ========================================== Personal Information Page
+.instructor-page.personal-info-page {
+
+    // ============ List
+    .list {
+        margin: 40px 0;
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 12px 0;
+        }
+    }
+
+    // ========xx== List
+
+}
+
+// ====================================xxx=== Personal Information Page
+
+
+
+// ========================================== Personal Information Page
+.instructor-page.attendees-page {
+
+    // ============ List
+    .header {
+        margin: 25px 0;
+    }
+
+    .list {
+        margin: 40px 0;
+
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        li:nth-child(odd) {
+            background: #fef5b1;
+        }
+
+        li:nth-child(even) {
+            background: #ececec;
+        }
+
+        li.active {
+            background: #f500ff;
+        }
+    }
+
+    // ========xx== List
+
+}
+
+// ====================================xxx=== Personal Information Page
+
+
+
+// ========================================== Instructor Dahsboard Page
+.instructor-dashboard {
+
+    // ============ List
+    header {
+        padding: 40px 0 0 0;
+    }
+
+    // ========xx== List
+
+}
+
+// ====================================xxx=== Instructor Dahsboard Page
+
+
+
+// ========================================== Change Password Page
+.instructor-page.change-password-page {
+
+    // ============ Header
+    .heading {
+        margin: 25px 0;
+    }
+
+    // ========xx== Header
+
+    // ============ Form
+    form {
+        margin: 25px 0;
+
+        .form-group {
+            margin: 20px 0;
+
+            input {
+                max-width: 100%;
+                width: 100%;
+                outline: none;
+                border: none;
+                border-radius: 5px;
+                box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+                padding: 10px 20px;
+            }
+
+            .btn {
+                background: #707070;
+                color: var(--white-color);
+                width: 100%;
+                text-align: center;
+                border-radius: 6px;
+                box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+                padding: 10px 20px;
+                margin-top: 30px;
+            }
+        }
+    }
+
+    // ========xx== Form
+
+}
+
+// ====================================xxx=== Change Password Page
+
+
+
+// ========================================== Instructor Booking Page
+.instructor-page.instructor-booking-page {
+
+
+    // ============ Form
+    form {
+        margin: 25px 0;
+
+        .form-group {
+            margin: 20px 0;
+
+            label {
+                font-size: 14px;
+            }
+
+            input,
+            textarea {
+                max-width: 100%;
+                width: 100%;
+                outline: none;
+                border: 2px solid var(--primary-color);
+                border-radius: 5px;
+                padding: 10px 20px;
+            }
+
+            input[type=time] {
+                max-width: 120px;
+                display: block;
+            }
+
+            &.form-radio-group {
+                display: flex;
+
+                input {
+                    max-width: 30px;
+                }
+            }
+
+            .btn {
+                background: var(--primary-color);
+                color: var(--white-color);
+                width: 100%;
+                text-align: center;
+                border-radius: 6px;
+                box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+                padding: 10px 20px;
+                color: var(--black-color);
+                font-weight: bold;
+            }
+        }
+    }
+
+    // ========xx== Form
+
+}
+
+// ====================================xxx=== Instructor Booking Page
+
+
+
+// ========================================== Instructor Booking Page
+.instructor-page.instructor-list-page {
+
+
+    // ============ Form
+    .header {
+        margin: 25px 0px;
+    }
+
+    // ========xx== Form
+
+
+    // ============ Form
+    form {
+        margin: 25px 0px;
+
+        .btn {
+            background: #707070;
+            color: var(--white-color);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            padding: 10px 40px;
+            border-radius: 8px;
+            width: 100%;
+        }
+    }
+
+    // ========xx== Form
+
+
+    // ============ Form
+    .list-wrapper {
+
+        .box {
+            background: var(--primary-color);
+            padding: 25px 0;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            text-align: center;
+            margin: 15px 0;
+        }
+    }
+
+    // ========xx== Form
+
+}
+
+// ====================================xxx=== Instructor Booking Page
+
+
+
+// ========================================== Instructor Booking Page
+.instructor-page.create-account-page {
+
+
+    // ============ Form
+    form {
+
+        .form-radio-type {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .box {
+                display: grid;
+                grid-template-columns: 30% 70%;
+
+                input {
+                    margin-top: 3px;
+                }
+
+                label {
+                    margin-left: 3px;
+                }
+            }
+        }
+    }
+
+    // ========xx== Form
+
+}
+
+// ====================================xxx=== Instructor Booking Page
+
+
+
+// ========================================== Gym Member Details Page
+.instructor-page.gym-member-details {
+
+
+    // ============ Form
+    .button-wrapper {
+        margin: 15px 0 !important;
+        padding: 15px 0;
+
+        .btn {
+            margin: 12px 0 !important;
+        }
+    }
+
+    .sign-out-link {
+        background: #e77474;
+        color: var(--black-color);
+        margin: auto;
+        width: fit-content !important;
+        padding: 10px 70px;
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    // ========xx== Form
+
+}
+
+// ====================================xxx=== Gym Member Details Page
+
+/* ==============================================================================================
+                                xxxx    Instructor Pages    xxxx
+============================================================================================== */

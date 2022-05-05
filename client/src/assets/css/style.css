@@ -1,0 +1,1327 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+:root {
+  --primary-color: #ffe100;
+  --white-color: #FFFFFF;
+  --light-color: #F1F1F1;
+  --black-color: #000000;
+  --dark-color: #333333;
+}
+
+.container {
+  max-width: 1140px;
+  width: 100%;
+  margin: auto;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    max-width: 92%;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: var(--black-color);
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+.btn {
+  text-decoration: none;
+  outline: none;
+  padding: 7px 12px;
+  border: none;
+  cursor: pointer;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 100vh;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.main-container {
+  max-width: 678px;
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+
+@media only screen and (max-width: 678px) {
+  .main-container {
+    max-width: 95%;
+  }
+}
+
+.logo a {
+  color: var(--black-color);
+  font-size: 22px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.logo a span {
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  padding: 3px;
+  margin: 0 4px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  color: var(--white-color);
+}
+
+.text-dark {
+  color: var(--black-color);
+}
+
+/* ==============================================================================================
+                                        Gym Member Pages
+============================================================================================== */
+.gym-member-home-page header#header {
+  position: absolute;
+  top: 0;
+  max-width: 100%;
+  width: 100%;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  padding: 10px;
+  max-height: 65px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.gym-member-home-page header#header .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gym-member-home-page header#header .wrapper .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.gym-member-home-page header#header .wrapper .menu .menuToggle {
+  background: url(../img/menu.png);
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.gym-member-home-page header#header .wrapper .menu .logo {
+  display: none;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  text-align: center;
+  width: 100%;
+}
+
+.gym-member-home-page header#header .wrapper .menu .logo a {
+  color: #000000;
+  font-weight: bold;
+  font-size: 32px;
+  text-align: center;
+  width: 200px;
+  display: block;
+}
+
+.gym-member-home-page header#header .wrapper .menu .logo a span {
+  color: #FFFFFF;
+  background: var(--primary-color);
+  padding: 2px;
+  margin: 0 5px;
+}
+
+.gym-member-home-page header#header .nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 90vh;
+  background: var(--black-color);
+  position: relative;
+  top: -9999px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.gym-member-home-page header#header .nav-menu ul {
+  text-align: center;
+}
+
+.gym-member-home-page header#header .nav-menu ul li {
+  margin: 35px 0;
+  display: block;
+}
+
+.gym-member-home-page header#header .nav-menu ul li a {
+  color: #FFFFFF;
+  font-size: 18px;
+}
+
+.gym-member-home-page header#header .nav-menu ul li a.btn {
+  background: var(--primary-color);
+  color: var(--black-color);
+  padding: 8px 80px;
+  border-radius: 8px;
+}
+
+.gym-member-home-page header#header.active .wrapper .menu .menuToggle {
+  background: url(../img/close.png);
+}
+
+.gym-member-home-page header#header.active .wrapper .menu .logo {
+  display: block;
+}
+
+.gym-member-home-page header#header.active .nav-menu {
+  top: 0px;
+}
+
+.gym-member-home-page section.hero-section {
+  background: url(../img/background-image.JPG);
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.gym-member-home-page section.hero-section .bg-color {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.gym-member-home-page section.hero-section .content {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gym-member-home-page section.hero-section .content a.btn {
+  background: var(--primary-color);
+  color: var(--black-color);
+  font-size: 18px;
+  padding: 8px 80px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.gym-member-home-page section.section-01 .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.gym-member-home-page section.section-01 .wrapper .box {
+  color: var(--white-color);
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.gym-member-home-page section.section-01 .wrapper .box .bg-color {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 70px 40px;
+}
+
+.gym-member-home-page section.section-01 .wrapper .box h2 {
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.gym-member-home-page section.section-01 .wrapper .box p {
+  margin: 25px 0;
+}
+
+.gym-member-home-page section.section-01 .wrapper .box .btn {
+  background: var(--primary-color);
+  padding: 8px 65px;
+  font-size: 22px;
+  font-weight: normal;
+  color: var(--black-color);
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.gym-member-home-page section.section-01 .wrapper #box-1 {
+  background: url(../img/header-image.JPG);
+}
+
+.gym-member-home-page section.section-01 .wrapper #box-2 {
+  background: url(../img/header-image2.JPG);
+}
+
+.gym-member-home-page section.section-01 .wrapper #box-3 {
+  background: url(../img/header-image.JPG);
+}
+
+.gym-member-home-page section.section-01 .wrapper #box-4 {
+  background: url(../img/header-image2.JPG);
+}
+
+.gym-member-login-page header {
+  width: 100%;
+  text-align: center;
+  padding: 40px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gym-member-login-page header .logo {
+  margin: auto;
+}
+
+.gym-member-login-page section.login-form-section {
+  margin: 40px 0;
+}
+
+.gym-member-login-page section.login-form-section .heading {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.gym-member-login-page section.login-form-section .login-form-wrapper {
+  background: var(--black-color);
+  border-radius: 8px;
+  padding: 40px 15px;
+}
+
+.gym-member-login-page section.login-form-section .login-form-wrapper .group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.gym-member-login-page section.login-form-section .login-form-wrapper .group input {
+  border: none;
+  border-bottom: 1px solid var(--light-color);
+  padding: 7px 4px 4px 8px;
+  background: transparent;
+  margin: 8px 0;
+  outline: none;
+  display: block;
+}
+
+.gym-member-login-page section.login-form-section .login-form-wrapper .group input:focus,
+.gym-member-login-page section.login-form-section .login-form-wrapper .group input:focus::-webkit-input-placeholder {
+  color: var(--white-color);
+}
+
+.gym-member-login-page section.login-form-section .login-form-wrapper .group input:focus,
+.gym-member-login-page section.login-form-section .login-form-wrapper .group input:focus:-ms-input-placeholder {
+  color: var(--white-color);
+}
+
+.gym-member-login-page section.login-form-section .login-form-wrapper .group input:focus,
+.gym-member-login-page section.login-form-section .login-form-wrapper .group input:focus::-ms-input-placeholder {
+  color: var(--white-color);
+}
+
+.gym-member-login-page section.login-form-section .login-form-wrapper .group input:focus,
+.gym-member-login-page section.login-form-section .login-form-wrapper .group input:focus::placeholder {
+  color: var(--white-color);
+}
+
+.gym-member-login-page section.login-form-section .login-form-wrapper button {
+  width: 100%;
+  display: block;
+  margin-top: 15px;
+  cursor: pointer;
+  background: #707070;
+  color: var(--white-color);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  padding: 10px 40px;
+  border-radius: 6px;
+}
+
+.gym-member-login-page section.login-form-section .login-form-wrapper a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: var(--light-color);
+  margin: 10px 0;
+}
+
+.gym-member-login-page section.login-form-section .login-form-wrapper a.btn {
+  background: var(--primary-color);
+  padding: 8px 40px;
+  border-radius: 8px;
+  color: var(--dark-color);
+  margin-top: 25px;
+}
+
+.gym-member-login-page footer {
+  background: var(--black-color);
+  padding: 25px 0;
+}
+
+.gym-member-login-page footer .logo {
+  background: var(--white-color);
+  padding: 5px 7px;
+  border-radius: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+.gym-member-login-page footer .logo a {
+  color: var(--black-color);
+}
+
+.gym-member-login-page footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 50px;
+  width: 100%;
+  margin: 22px auto 10px;
+}
+
+.gym-member-login-page footer ul li a {
+  color: var(--white-color);
+}
+
+.gym-member-login-page footer ul li a i {
+  font-size: 17px;
+}
+
+.gym-member-login-page footer a,
+.gym-member-login-page footer p {
+  color: var(--light-color);
+  font-size: 12px;
+}
+
+.member-dashboard section.main-content {
+  margin: 15px 0;
+}
+
+.member-dashboard section.main-content .remaning-box {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 7px;
+  padding: 8px;
+  width: 100%;
+  margin: 15px auto;
+  text-align: center;
+}
+
+.member-dashboard section.main-content .remaning-box h4 {
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.member-dashboard section.main-content .remaning-box h1 {
+  font-size: 55px;
+  color: var(--primary-color);
+  font-weight: normal;
+}
+
+.member-dashboard section.main-content .button-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin: 10px auto;
+}
+
+.member-dashboard section.main-content .button-wrapper .btn {
+  width: 100%;
+  background: var(--primary-color);
+  margin: 7px 0;
+  text-align: center;
+  border-radius: 7px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.member-dashboard section.main-content .button-wrapper .buy-class {
+  background: #707070;
+  color: var(--white-color);
+}
+
+.member-dashboard section.main-content .button-wrapper .view-class {
+  background: var(--black-color);
+  color: var(--white-color);
+}
+
+.member-dashboard section.main-content .links {
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  margin-top: 40px;
+  padding-top: 10px;
+}
+
+.member-dashboard section.main-content .links ul {
+  max-width: 300px;
+  width: 100%;
+  margin: auto;
+}
+
+.member-dashboard section.main-content .links ul li {
+  margin: 20px 0;
+}
+
+.member-dashboard section.main-content .links ul li a {
+  color: #464646;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.member-dashboard section.main-content .sign-out-link {
+  text-align: center;
+  width: 100%;
+  display: block;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.packages-page .main-content {
+  width: 100%;
+  margin: auto;
+}
+
+.packages-page .main-content .box {
+  border: 1px solid var(--primary-color);
+  padding: 8px;
+  border-radius: 7px;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1), inset 0 0 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.1), inset 0 0 3px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: var(--black-color);
+}
+
+.packages-page .main-content .content {
+  margin: 20px 0;
+}
+
+.packages-page .main-content .content h4 {
+  margin-bottom: 15px;
+}
+
+.packages-page .main-content .content .btn.unlimited-class {
+  background: var(--black-color);
+  color: var(--white-color);
+  padding: 25px 50px;
+  display: block;
+  text-align: center;
+}
+
+.packages-page .main-content .class-list {
+  margin-bottom: 40px;
+}
+
+.packages-page .main-content .class-list ul {
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.packages-page .main-content .class-list ul li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 15px 0;
+}
+
+.packages-page .main-content .class-list ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.packages-page .main-content .class-list ul li a .left {
+  color: var(--primary-color);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.packages-page .main-content .class-list ul li a .middle {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.packages-page .main-content .class-list ul li a .right {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.packages-page .main-content .class-list ul li.last .left {
+  font-size: 18px;
+}
+
+.packages-page .main-content .class-list ul li.last .middle {
+  color: var(--primary-color);
+}
+
+.packages-page .main-content .class-list .btn.packages-2 {
+  background: #707070;
+  color: var(--white-color);
+  display: block;
+  margin-top: 25px !important;
+  margin: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 60px;
+  border-radius: 8px;
+}
+
+.checkout-page .main-content {
+  width: 100%;
+  margin: auto;
+}
+
+.checkout-page .main-content .box-wrapper {
+  margin: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.checkout-page .main-content form .form-group {
+  margin: 25px 0;
+}
+
+.checkout-page .main-content form .form-group label {
+  font-size: 10px;
+  font-weight: bold;
+  margin-bottom: 3px;
+  display: block;
+}
+
+.checkout-page .main-content form .form-group input {
+  width: 100%;
+  outline: none;
+  border: none;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 7px;
+  display: block;
+}
+
+.checkout-page .main-content form .form-group select {
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 7px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.checkout-page .main-content form .form-group .btn {
+  width: 100%;
+  text-align: center;
+  background: green;
+  padding: 10px 50px;
+  color: var(--white-color);
+  font-weight: bold;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.checkout-page .main-content form .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.checkout-page .main-content form .row .col-12 {
+  width: 100%;
+}
+
+.checkout-page .main-content form .row .col-12 input {
+  border-radius: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.checkout-page .main-content form .row .col-6 {
+  width: 50%;
+}
+
+.checkout-page .main-content form .row .col-6-first input {
+  border-radius: 0;
+  border-bottom-left-radius: 5px;
+}
+
+.checkout-page .main-content form .row .col-6-second input {
+  border-radius: 0;
+  border-bottom-right-radius: 5px;
+}
+
+.class-booked-page .main-content {
+  width: 100%;
+  margin: auto;
+}
+
+.class-booked-page .main-content .container {
+  padding: 30px 0;
+}
+
+.class-booked-page .main-content p {
+  margin: 25px 0;
+}
+
+.class-booked-page .main-content .checkicon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 30px 0;
+}
+
+.class-booked-page .main-content .checkicon i {
+  font-size: 50px;
+  padding: 20px;
+  border-radius: 50%;
+  border: 3px solid var(--black-color);
+}
+
+.class-booked-page .main-content .btn {
+  display: block;
+  width: 100%;
+  background: var(--primary-color);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 7px;
+  text-align: center;
+}
+
+.booking-page .main-content {
+  max-width: 300px;
+  width: 100%;
+  margin: auto;
+}
+
+.booking-page .main-content .booking-box-wrapper {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+.booking-page .main-content .booking-box-wrapper .booking-box {
+  background: var(--primary-color);
+  padding: 15px 15px 50px 15px;
+  border-radius: 10px;
+  margin: 30px 0;
+}
+
+.booking-page .main-content .booking-box-wrapper .booking-cancel-btn .btn {
+  border: 1px solid var(--dark-color);
+  padding: 8px 45px;
+  background: transparent;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.booking-page .main-content .modal-wrapper {
+  position: fixed;
+  width: 0;
+  height: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  top: 0;
+  left: 0;
+}
+
+.booking-page .main-content .modal-wrapper .modal-box {
+  background: var(--white-color);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 15px;
+  max-width: 220px;
+  width: 100%;
+}
+
+.booking-page .main-content .modal-wrapper .modal-box h3 {
+  margin-bottom: 70px;
+}
+
+.booking-page .main-content .modal-wrapper .modal-box .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.booking-page .main-content .modal-wrapper .modal-box .buttons button {
+  max-width: 50%;
+  width: 100%;
+  margin: 0 5px;
+  border-radius: 7px;
+}
+
+.booking-page .main-content .modal-wrapper .modal-box .buttons button.keep {
+  background: #e77474;
+}
+
+.booking-page .main-content .modal-wrapper .modal-box .buttons button.cancel {
+  background: #3bce3b;
+}
+
+.booking-page .main-content .modal-wrapper .modal-box#box-1 {
+  display: none;
+}
+
+.booking-page .main-content .modal-wrapper .modal-box#box-1.active {
+  display: block;
+}
+
+.booking-page .main-content .modal-wrapper .modal-box#box-2 {
+  display: none;
+  padding-top: 70px;
+}
+
+.booking-page .main-content .modal-wrapper .modal-box#box-2.active {
+  display: block;
+}
+
+.booking-page .main-content .modal-wrapper.active {
+  width: 100%;
+  height: 100vh;
+  opacity: 1;
+  visibility: visible;
+}
+
+.calendar-page .main-content {
+  width: 100%;
+  margin: auto;
+}
+
+.calendar-page .main-content .calendar-wrapper .calendar-box .calendar {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+
+.calendar-page .main-content .calendar-wrapper .calendar-box .calendar div {
+  margin: 7px 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30px;
+  height: 30px;
+}
+
+.calendar-page .main-content .calendar-wrapper .calendar-box .calendar .week {
+  font-weight: bolder;
+  font-size: 27px;
+}
+
+.calendar-page .main-content .calendar-wrapper .calendar-box .calendar .day {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.calendar-page .main-content .calendar-wrapper .calendar-box .calendar .day.mute {
+  font-weight: normal;
+}
+
+.calendar-page .main-content .calendar-wrapper .calendar-box .calendar .day.active {
+  padding: 7px;
+  border-radius: 50%;
+  background: var(--primary-color);
+}
+
+.calendar-page .main-content .calendar-wrapper .class-container .class-wrapper .class {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.calendar-page .main-content .calendar-wrapper .class-container .class-wrapper .class .class-info .time {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.calendar-page .main-content .calendar-wrapper .class-container .class-wrapper .class .class-info .name {
+  font-size: 14px;
+}
+
+.calendar-page .main-content .calendar-wrapper .class-container .class-wrapper .class .class-info .tutor {
+  font-size: 14px;
+}
+
+.calendar-page .main-content .calendar-wrapper .class-container .class-wrapper .class .class-info .extra {
+  font-size: 13px;
+  color: #707070;
+}
+
+.calendar-page .main-content .calendar-wrapper .class-container .class-wrapper .class .btn {
+  background: var(--primary-color);
+  border-radius: 7px;
+}
+
+.calendar-page .main-content .calendar-wrapper .class-container .class-wrapper .details {
+  margin: 5px 0;
+}
+
+.calendar-page .main-content .calendar-wrapper .class-container .class-wrapper .details .detail-heading {
+  padding-left: 15px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.calendar-page .main-content .calendar-wrapper .class-container .class-wrapper .details .detail-heading .see-details {
+  display: block;
+}
+
+.calendar-page .main-content .calendar-wrapper .class-container .class-wrapper .details .detail-heading .see-less {
+  display: none;
+}
+
+.calendar-page .main-content .calendar-wrapper .class-container .class-wrapper .details .body {
+  background: var(--primary-color);
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 12px;
+  display: none;
+}
+
+.calendar-page .main-content .calendar-wrapper .class-container .class-wrapper .details .body h3 {
+  font-size: 14px;
+  padding: 7px 0 0 0;
+}
+
+.calendar-page .main-content .calendar-wrapper .class-container .class-wrapper .details .body p {
+  font-size: 12px;
+  padding: 5px 0;
+}
+
+.calendar-page .main-content .calendar-wrapper .class-container .class-wrapper .details .body hr {
+  border: 1px solid var(--dark-color);
+  background: transparent;
+}
+
+.calendar-page .main-content .calendar-wrapper .class-container .class-wrapper .details.active .detail-heading .see-details {
+  display: none;
+}
+
+.calendar-page .main-content .calendar-wrapper .class-container .class-wrapper .details.active .detail-heading .see-less {
+  display: block;
+}
+
+.calendar-page .main-content .calendar-wrapper .class-container .class-wrapper .details.active .body {
+  display: block;
+}
+
+.calendar-page .main-content .calendar-wrapper .box {
+  margin: 15px 0;
+}
+
+.calendar-page .main-content .calendar-wrapper .box .heading {
+  border-radius: 8px;
+  background: var(--black-color);
+  color: var(--white-color);
+  padding: 7px 30px;
+  text-align: center;
+}
+
+/* ==============================================================================================
+                                xxxx    Gym Member Pages    xxxx
+============================================================================================== */
+/* ==============================================================================================
+                                        Instructor Pages
+============================================================================================== */
+.instructor-page.view-booking-page .booking-box-wrapper {
+  margin: auto;
+}
+
+.instructor-page.view-booking-page .booking-box-wrapper .booking-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.instructor-page.view-booking-page .booking-box-wrapper .booking-btn button {
+  max-width: 50%;
+  width: 100%;
+  margin: 5px 5px;
+  color: var(--white-color);
+  background: #3bce3b;
+  border-radius: 7px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  padding: 8px 25px;
+}
+
+.instructor-page.view-booking-page .booking-box-wrapper .booking-btn button#booking-cancel {
+  background: #e77474;
+}
+
+.instructor-page.personal-info-page .list {
+  margin: 40px 0;
+}
+
+.instructor-page.personal-info-page .list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 12px 0;
+}
+
+.instructor-page.attendees-page .header {
+  margin: 25px 0;
+}
+
+.instructor-page.attendees-page .list {
+  margin: 40px 0;
+}
+
+.instructor-page.attendees-page .list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 0;
+}
+
+.instructor-page.attendees-page .list li:nth-child(odd) {
+  background: #fef5b1;
+}
+
+.instructor-page.attendees-page .list li:nth-child(even) {
+  background: #ececec;
+}
+
+.instructor-page.attendees-page .list li.active {
+  background: #f500ff;
+}
+
+.instructor-dashboard header {
+  padding: 40px 0 0 0;
+}
+
+.instructor-page.change-password-page .heading {
+  margin: 25px 0;
+}
+
+.instructor-page.change-password-page form {
+  margin: 25px 0;
+}
+
+.instructor-page.change-password-page form .form-group {
+  margin: 20px 0;
+}
+
+.instructor-page.change-password-page form .form-group input {
+  max-width: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+}
+
+.instructor-page.change-password-page form .form-group .btn {
+  background: #707070;
+  color: var(--white-color);
+  width: 100%;
+  text-align: center;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  padding: 10px 20px;
+  margin-top: 30px;
+}
+
+.instructor-page.instructor-booking-page form {
+  margin: 25px 0;
+}
+
+.instructor-page.instructor-booking-page form .form-group {
+  margin: 20px 0;
+}
+
+.instructor-page.instructor-booking-page form .form-group label {
+  font-size: 14px;
+}
+
+.instructor-page.instructor-booking-page form .form-group input,
+.instructor-page.instructor-booking-page form .form-group textarea {
+  max-width: 100%;
+  width: 100%;
+  outline: none;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.instructor-page.instructor-booking-page form .form-group input[type=time] {
+  max-width: 120px;
+  display: block;
+}
+
+.instructor-page.instructor-booking-page form .form-group.form-radio-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.instructor-page.instructor-booking-page form .form-group.form-radio-group input {
+  max-width: 30px;
+}
+
+.instructor-page.instructor-booking-page form .form-group .btn {
+  background: var(--primary-color);
+  color: var(--white-color);
+  width: 100%;
+  text-align: center;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  padding: 10px 20px;
+  color: var(--black-color);
+  font-weight: bold;
+}
+
+.instructor-page.instructor-list-page .header {
+  margin: 25px 0px;
+}
+
+.instructor-page.instructor-list-page form {
+  margin: 25px 0px;
+}
+
+.instructor-page.instructor-list-page form .btn {
+  background: #707070;
+  color: var(--white-color);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  padding: 10px 40px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.instructor-page.instructor-list-page .list-wrapper .box {
+  background: var(--primary-color);
+  padding: 25px 0;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.instructor-page.create-account-page form .form-radio-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.instructor-page.create-account-page form .form-radio-type .box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 70%;
+      grid-template-columns: 30% 70%;
+}
+
+.instructor-page.create-account-page form .form-radio-type .box input {
+  margin-top: 3px;
+}
+
+.instructor-page.create-account-page form .form-radio-type .box label {
+  margin-left: 3px;
+}
+
+.instructor-page.gym-member-details .button-wrapper {
+  margin: 15px 0 !important;
+  padding: 15px 0;
+}
+
+.instructor-page.gym-member-details .button-wrapper .btn {
+  margin: 12px 0 !important;
+}
+
+.instructor-page.gym-member-details .sign-out-link {
+  background: #e77474;
+  color: var(--black-color);
+  margin: auto;
+  width: -webkit-fit-content !important;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+  padding: 10px 70px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* ==============================================================================================
+                                xxxx    Instructor Pages    xxxx
+============================================================================================== */
+/*# sourceMappingURL=style.css.map */
